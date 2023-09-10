@@ -46,13 +46,13 @@ class ImageCompressor:
 
         compressed_image = Image.merge("RGB", (red_array, green_array, blue_array))
         compressed_image.show()
-        compressed_image.save("./results/compressed_robot.jpg")
+        compressed_image.save("./results/compressed.jpg")
 
 
 # ----------------------Image Compression------------------------
 if __name__ == "__main__":
-    file_path = "data/robot.jpg"
-    singular_value_limit = 600
+    file_path = "data/alex-knight-2EJCSULRwC8-unsplash.jpg"
+    singular_value_limit = 1200
 
     compressor = ImageCompressor(file_path, singular_value_limit)
     compressor.compress_and_combine_channels()
